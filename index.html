@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style/style.css"> -->
+    <link rel="stylesheet" href="style/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="data:image/jpeg;base64,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">
+    <title>Real Exam</title>
+</head>
+<body>
+    <header id="header">
+        <nav class="nav_one">
+            <div class="container">
+                <div class="nav_bar-one">
+                    <div class="nav_one-logo">
+                        <ul class="nav_one-left">
+                            <li><img src="img/Food__Logo.svg" alt=""></li>
+                            <li class="nav_left-list">Home</li>
+                            <li class="nav_left-list">About us</li>
+                            <li class="nav_left-list">Menu</li>
+                            <li class="nav_left-list">Features</li>
+                            <li class="nav_left-list">Contact us</li>
+                        </ul>
+                    </div>
+    
+                    <div class="nav_one-btn">
+                        <button class="btn_1">
+                            <a href="https://najottalim.uz/">Booking Now</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="header_section-one">
+            <div class="container">
+                <div class="stake_section">
+                    <div class="section_one-text">
+                        <p class="section_text-title">Making time a good time by making food the good food.</p>
+                        <p class="section_text-main">There are many things are needed to start the Fast Food Business. You need not only Just Food Stalls with Persons but also specialized equipment,</p>
+                        <div class="section_one-buttons">
+                            <button class="section_buttons-text">Order Now</button>
+                            <button class="section_buttons-text">Food Details</button>
+                        </div>
+                    </div>
+
+                    <div class="section_one-picture">
+                        <img src="img/CSmJnTefxM 1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main id="main">
+        <section class="main_section">
+            <div class="container">
+                <div class="main_section-emodji">
+                    <p class="sectin_emodji-text">Features</p>
+                    <p class="sectin_emodji-text2">Food with a New Passion</p>
+
+                    <div class="section_emodji-cards">
+                        <div class="section_emodji-card1">
+                            <div class="section_emodji-card1-circle">
+                            <img class="section_card1-img1" src="img/Group 94.svg" alt="">
+                            </div>                            
+                            <p class="section_emodji-card1-title">Quality Food</p>
+                            <p>It can be a very secure path to earn good money and make you very successful creative entrepreneur.</p>
+                        </div>
+
+                        <div class="section_emodji-card1">
+                            <div class="section_emodji-card1-circle section_emodji-card1-circle2">
+                            <img class="section_card1-img1" src="img/food-delivery-1.svg" alt="">
+                            </div>                            
+                            <p class="section_emodji-card1-title">Food Delivery</p>
+                            <p>It can be a very secure path to earn good money and make you very successful creative entrepreneur.</p>
+                        </div>
+
+                        <div class="section_emodji-card1">
+                            <div class="section_emodji-card1-circle section_emodji-card1-circle3">
+                            <img class="section_card1-img1" src="img/Group 93.svg" alt="">
+                            </div>                            
+                            <p class="section_emodji-card1-title">Super Taste</p>
+                            <p>It can be a very secure path to earn good money and make you very successful creative entrepreneur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section_cookes">
+                <img src="img/Vector 3 (1).png" alt="" class="section_cookes_back">
+
+                <div class="container">
+                    <div class="cookes-card">
+                        <div class="">
+                            <img src="img/Mask Group.png" alt="">
+                        </div>
+
+                        <div class="section_cookes-texts">
+                            <p class="section_cookes-texts-title11">About us</p>
+                            <p>Food Stalls with Persons but  to  Product marketing plane
+                             catlogues etc to. </p>
+                            <p class="section_cookes-texts-about">There are many things are needed to start the Fast Food Business. You need not only Just Food Stalls with Persons but also equipment  make your marketing plane Effective.</p>
+                            <button class="cookes_btn">
+                                <a href="https://eda.ru/recepty/salaty">Read More</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="section_meals">
+            <div class="container">
+`               <div class="section_meals-cards-row">
+
+                    <div class="section_meals-title111">
+        <p class="section_meals-title11-1">Menu</p>
+        <p class="section_meals-title11-2">Food Full of treaty Love</p>
+        <p class="section_meals-title11-3">There are many things are needed to start the Fast Food Business. You need not only Just Food Stalls with Persons but also specialized equipment, Skills to manage Customers, </p>
+                    </div>
+
+                    <div class="section_meals-cards">
+        <div class="section_meals-card1">
+            <img src="img/Mask Group (1).png" alt="">
+            <div class="section_meals-card1-price">
+                <div class="section_price-div1">
+                    <p>Vegie Muffen</p>
+                    <p>16$</p>
+                </div>
+
+                <p class="section_price-div1-16">There are many things are needed to start the Fast Food Business.</p>
+
+                <div class="section_price-div2">
+                    <i class="fa-solid fa-square-plus"></i>
+                    <div class="section_price-div2-stars">
+                        <img src="img/1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section_meals-card1">
+            <img src="img/Mask Group (2).png" alt="">
+            <div class="section_meals-card1-price">
+                <div class="section_price-div1">
+                    <p>Salads</p>
+                    <p>12$</p>
+                </div>
+
+                <p class="section_price-div1-16">There are many things are needed to start the Fast Food Business.</p>
+
+                <div class="section_price-div2">
+                    <i class="fa-solid fa-square-plus"></i>
+                    <div class="section_price-div2-stars">
+                        <img src="img/nol.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section_meals-card1">
+            <img src="img/Mask Group (3).png" alt="">
+            <div class="section_meals-card1-price">
+                <div class="section_price-div1">
+                    <p>Burger</p>
+                    <p>10$</p>
+                </div>
+
+                <p class="section_price-div1-16">
+                    There are many things are needed to start the Fast Food Business.
+                </p>
+
+                <div class="section_price-div2">
+                    <i class="fa-solid fa-square-plus"></i>
+                    <div class="section_price-div2-stars">
+                        <img src="img/uch.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+                    </div>
+
+                    <div class="section_meals-cards">
+        <div class="section_meals-card1">
+            <img src="img/Mask Group (3).png" alt="">
+            <div class="section_meals-card1-price">
+                <div class="section_price-div1">
+                    <p>Delmonico Steak dish</p>
+                    <p>14$</p>
+                </div>
+
+                <p class="section_price-div1-16">There are many things are needed to start the Fast Food Business.</p>
+
+                <div class="section_price-div2">
+                    <i class="fa-solid fa-square-plus"></i>
+                    <div class="section_price-div2-stars">
+                        <img src="img/uch.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section_meals-card1">
+            <img src="img/Mask Group (5).png" alt="">
+            <div class="section_meals-card1-price">
+                <div class="section_price-div1">
+                    <p>Egg Masala</p>
+                    <p>9$</p>
+                </div>
+
+                <p class="section_price-div1-16">There are many things are needed to start the Fast Food Business.</p>
+
+                <div class="section_price-div2">
+                    <i class="fa-solid fa-square-plus"></i>
+                    <div class="section_price-div2-stars">
+                        <img src="img/1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section_meals-card1">
+            <img src="img/Mask Group (6).png" alt="">
+            <div class="section_meals-card1-price">
+                <div class="section_price-div1">
+                    <p>Peach Melba dish</p>
+                    <p>15$</p>
+                </div>
+
+                <p class="section_price-div1-16">There are many things are needed to start the Fast Food Business.</p>
+
+                <div class="section_price-div2">
+                    <i class="fa-solid fa-square-plus"></i>
+                    <div class="section_price-div2-stars">
+                        <img src="img/ikk.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+                    </div>
+
+                    <button>
+                        Learn More
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section_contacts">
+            <div class="container">
+                <div class="section_contacts_main">
+                    <div class="serction_contacts-texts">
+                        <p>Take away</p>
+                        <p>Food Stalls with Persons but  to  Product marketing plane. </p>
+                        <p>There are many things are needed to start the Fast Food Business. You need not only Just Food Stalls with Persons but also specialized equipmentwith Persons but also  Just Food Stalls with Persons.</p>
+                        <div class="serction_contacts-google">
+                            <img src="img/Group 73.png" alt="">
+                            <img src="img/Group 75 (1).png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="PPP">
+                        <img src="img/Mask Group (7).png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="girl">
+            <div class="section_meals-title111 M111">
+                <p class="section_meals-title11-1">Testimonial</p>
+                <p class="section_meals-title11-2">Making Food great again and again</p>
+                <p class="section_meals-title11-3">You need not only Just Food Stalls with Persons but also specialized equipment, Skills to manage Customers, Effective Product catlogues etc to make your.</p>
+            </div>
+
+            <img src="img/Group 127.png" alt="">
+
+            <p class="MMM">
+                You need not only Just Food Stalls with Persons but also specialized equipment, Skills to manage Customers, Effective Product catlogues etc very successful to make your.
+            </p>
+
+            <img src="img/a11.png" alt="">
+
+            <p class="l1">Augusta W. Reynoso</p>
+            <p class="l2">UI&UX DeSIGNER</p>
+        </section>
+
+        <section class="section_input">
+            <div class="container">
+                <div class="la">
+                    <p>Contact </p>
+                <p class="KKK">Food Stalls with Persons but also specialized equipment, Skills to manage.</p>
+
+                <div class="la_la">
+                    <input type="text" placeholder="Enter your message">
+                    <button class="btn_la">
+                        Send
+                    </button>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer #footer>
+        <section class="footer-section">
+            <div class="container">
+                <div class="group55">
+                    <div class="footer_groups">
+                        <img src="img/Food__Logo.svg" alt="">
+                        <p class="">www.company name.com</p>
+                        <p class="li">companyname@gmail.com</p>
+                        <p class="">Phone: +7 485-118-03-25</p>
+                    </div>
+    
+                    <div class="footer_groups">
+                        <p class="k">Home</p>
+                        <p>Landingpage</p>
+                        <p>Documentation</p>
+                        <p>Referral Program</p>
+                        <p>UI & UX Design</p>
+                        <p>Web Design</p>
+                    </div>
+
+
+                    <div class="footer_groups">
+                        <p class="k">Home</p>
+                        <p>Landingpage</p>
+                        <p>Documentation</p>
+                        <p>Referral Program</p>
+                        <p>UI & UX Design</p>
+                        <p>Web Design</p>
+                    </div>
+
+                    <div class="footer_groups">
+                        <p class="k">Home</p>
+                        <p>Landingpage</p>
+                        <p>Documentation</p>
+                        <p>Referral Program</p>
+                        <p>UI & UX Design</p>
+                        <p>Web Design</p>
+                    </div>
+
+                    <div class="footer_groups">
+                        <p class="k">Home</p>
+                        <p>Landingpage</p>
+                        <p>Documentation</p>
+                        <p>Referral Program</p>
+                        
+
+                        <div class="ka">
+                            <img src="img/insta.svg" alt="">
+                            <img src="img/fcb.svg" alt="">
+                            <img src="img/twitter 1.svg" alt="">
+                            <img src="img/youtube.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
